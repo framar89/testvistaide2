@@ -1,7 +1,7 @@
 inline:
   schemaVersion: 2.1.0
   metadata:
-    name: test-custom-ide
+    name: test-custom-ide2
   components:
     - name: vista-ide
       container:
@@ -36,4 +36,4 @@ inline:
               urlRewriteSupported: true
       attributes:
         ports:
-          - exposedPort: 80
+          - exposedPort: 8080
