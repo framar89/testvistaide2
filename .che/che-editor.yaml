@@ -1,7 +1,7 @@
 inline:
   schemaVersion: 2.1.0
   metadata:
-    name: test-custom-ide2
+    name: test-custom-ide
   components:
     - name: vista-ide
       container:
@@ -25,7 +25,7 @@ inline:
         image: "ghcr.io/framar89/vistaideserver:latest"
         endpoints:
           - name: websocket
-            targetPort: 80
+            targetPort: 8080
             exposure: public
             secure: true
             protocol: ws
@@ -36,4 +36,4 @@ inline:
               urlRewriteSupported: true
       attributes:
         ports:
-          - exposedPort: 8080
+          - exposedPort: 80
