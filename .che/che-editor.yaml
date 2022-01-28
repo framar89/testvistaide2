@@ -9,7 +9,7 @@ inline:
         mountSources: true
         endpoints:
           - name: vista
-            targetPort: 80
+            targetPort: 8080
             exposure: public
             protocol: http
             attributes:
@@ -19,13 +19,13 @@ inline:
               urlRewriteSupported: true
       attributes:
         ports:
-          - exposedPort: 80
+          - exposedPort: 8080
     - name: vista-websocket
       container:
         image: "ghcr.io/framar89/vistaideserver:latest"
         endpoints:
           - name: websocket
-            targetPort: 8080
+            targetPort: 80
             exposure: public
             secure: true
             protocol: ws
