@@ -38,3 +38,17 @@ inline:
       attributes:
         ports:
           - exposedPort: 80
+    - name: che-machine-exec
+      container:
+        image: >-
+          quay.io/eclipse/che-machine-exec:7.43.0
+        command:
+          - /go/bin/che-machine-exec
+          - '--url'
+          - 127.0.0.1:3333
+          - '--idle-timeout'
+          - '15m'
+      attributes:
+        app.kubernetes.io/component: machine-exec
+        app.kubernetes.io/part-of: che-theia.eclipse.org
+
