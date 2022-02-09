@@ -47,12 +47,8 @@ inline:
           - '--url'
           - 127.0.0.1:3333
           - '--idle-timeout'
-          - '3m'
+          - '15m'
       attributes:
         app.kubernetes.io/component: machine-exec
         app.kubernetes.io/part-of: che-theia.eclipse.org
-    - name: test-activity
-      container:
-        image: >-
-          ghcr.io/xfreeg0/test-activity:latest
 
