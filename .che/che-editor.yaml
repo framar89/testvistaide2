@@ -47,7 +47,7 @@ inline:
           - '--url'
           - 127.0.0.1:3333
           - '--idle-timeout'
-          - '15m'
+          - '2m'
       attributes:
         app.kubernetes.io/component: machine-exec
         app.kubernetes.io/part-of: che-theia.eclipse.org
